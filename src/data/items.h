@@ -1185,7 +1185,7 @@ const struct Item gItems[] =
     {
         .name = _("FIRE STONE"),
         .itemId = ITEM_FIRE_STONE,
-        .price = 2100,
+        .price = 100, //2100
         .description = sFireStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1207,7 +1207,7 @@ const struct Item gItems[] =
     {
         .name = _("WATER STONE"),
         .itemId = ITEM_WATER_STONE,
-        .price = 2100,
+        .price = 100, //2100
         .description = sWaterStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2291,7 +2291,7 @@ const struct Item gItems[] =
         .description = sKingsRockDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc =  ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_SILVER_POWDER] =
@@ -2349,11 +2349,11 @@ const struct Item gItems[] =
         .name = _("DEEPSEATOOTH"),
         .itemId = ITEM_DEEP_SEA_TOOTH,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_DEEP_SEA_TOOTH,
+        //.holdEffect = HOLD_EFFECT_DEEP_SEA_TOOTH,
         .description = sDeepSeaToothDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, //ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_DEEP_SEA_SCALE] =
@@ -2361,11 +2361,11 @@ const struct Item gItems[] =
         .name = _("DEEPSEASCALE"),
         .itemId = ITEM_DEEP_SEA_SCALE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_DEEP_SEA_SCALE,
+        //.holdEffect = HOLD_EFFECT_DEEP_SEA_SCALE,
         .description = sDeepSeaScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, //ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_SMOKE_BALL] =
@@ -2679,12 +2679,12 @@ const struct Item gItems[] =
     {
         .name = _("UP-GRADE"),
         .itemId = ITEM_UP_GRADE,
-        .price = 2100,
-        .holdEffect = HOLD_EFFECT_UP_GRADE,
+        .price = 100, //2100
+        //.holdEffect = HOLD_EFFECT_UP_GRADE,
         .description = sUpGradeDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, //ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_SHELL_BELL] =
