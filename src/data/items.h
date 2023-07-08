@@ -2683,7 +2683,7 @@ const struct Item gItems[] =
         //.holdEffect = HOLD_EFFECT_UP_GRADE,
         .description = sUpGradeDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type =  ITEM_USE_PARTY_MENU, //ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, //ItemUseOutOfBattle_CannotUse,
     },
 

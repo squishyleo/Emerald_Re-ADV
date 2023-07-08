@@ -14,7 +14,7 @@ OldaleTown_Mart_EventScript_Clerk::
 
 	.align 2
 OldaleTown_Mart_Pokemart_Basic:
-	.2byte ITEM_WATER_STONE
+	.2byte ITEM_UP_GRADE
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
