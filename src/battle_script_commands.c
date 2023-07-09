@@ -7840,7 +7840,7 @@ static void Cmd_metronome(void)
 
 static void Cmd_dmgtolevel(void)
 {
-    gBattleMoveDamage = gBattleMons[gBattlerAttacker].level;
+    gBattleMoveDamage = (gBattleMons[gBattlerAttacker].level) * 2; //made times 2 level
     gBattlescriptCurrInstr++;
 }
 

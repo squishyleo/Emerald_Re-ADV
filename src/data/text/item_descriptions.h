@@ -1318,9 +1318,8 @@ static const u8 sTM40Desc[] = _(
     "be avoided.");
 
 static const u8 sTM41Desc[] = _(
-    "Prevents the foe\n"
-    "from using the same\n"
-    "move in a row.");
+    "Doubles ATTACK\n"
+    "stat.");
 
 static const u8 sTM42Desc[] = _(
     "Raises ATTACK when\n"

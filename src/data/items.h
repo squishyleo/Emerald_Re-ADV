@@ -3953,11 +3953,11 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM41_TORMENT] =
+    [ITEM_TM41_SWORDS_DANCE] =
     {
         .name = _("TM41"),
-        .itemId = ITEM_TM41_TORMENT,
-        .price = 3000,
+        .itemId = ITEM_TM41_SWORDS_DANCE,
+        .price = 300,
         .description = sTM41Desc,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

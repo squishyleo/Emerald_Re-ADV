@@ -186,13 +186,13 @@ SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
 	.string "Just, you know, take this!$"
 
 @ Unused
-SlateportCity_ContestHall_Text_ExplainTorment:
+SlateportCity_ContestHall_Text_ExplainSwordsDance:
 	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
-	.string "use the same move twice in a row, see?\p"
+	.string "Hey, it's SWORDS DANCE, you hearing me?\p"
+	.string "Like, it doubles your ATTACK\n"
+	.string "stat, see?\p"
 	.string "Hey, now, you listen here, like,\n"
-	.string "I'm not laying a torment on you!$"
+	.string "I'm not gonna dance on you!$"
 
 @ Unused
 SlateportCity_ContestHall_Text_MCStepUpTakePartInContest:

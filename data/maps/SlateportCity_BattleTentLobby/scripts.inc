@@ -196,7 +196,7 @@ SlateportCity_BattleTentLobby_Movement_UnusedEnterDoor::
 	set_invisible
 	step_end
 
-SlateportCity_BattleTentLobby_EventScript_TormentGiver::
+SlateportCity_BattleTentLobby_EventScript_SwordsDanceGiver::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_TM41, SlateportCity_BattleTentLobby_EventScript_ReceivedTorment
@@ -204,12 +204,12 @@ SlateportCity_BattleTentLobby_EventScript_TormentGiver::
 	giveitem ITEM_TM41
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM41
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainSwordsDance, MSGBOX_DEFAULT
 	release
 	end
 
 SlateportCity_BattleTentLobby_EventScript_ReceivedTorment::
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainSwordsDance, MSGBOX_DEFAULT
 	release
 	end
 
@@ -284,13 +284,13 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 	.string "Hey, like, you! Zip it, you know?\n"
 	.string "Just, you know, take this!$"
 
-SlateportCity_BattleTentLobby_Text_ExplainTorment:
+SlateportCity_BattleTentLobby_Text_ExplainSwordsDance:
 	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
-	.string "use the same move twice in a row, see?\p"
+	.string "Hey, it's SWORDS DANCE, you hearing me?\p"
+	.string "Like, it doubles your ATTACK\n"
+	.string "stat, see?\p"
 	.string "Hey, now, you listen here, like,\n"
-	.string "I'm not laying a torment on you!$"
+	.string "I'm not gonna dance on you!$"
 
 SlateportCity_BattleTentLobby_Text_IllTryUsingBugMons:
 	.string "I don't really like BUG POKéMON,\n"
