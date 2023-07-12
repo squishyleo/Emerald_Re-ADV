@@ -29,7 +29,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_KARATE_CHOP] =
     {
         .effect = EFFECT_HIGH_CRITICAL,
-        .power = 50,
+        .power = 40, //50
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 25,
@@ -302,7 +302,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STOMP] =
     {
         .effect = EFFECT_FLINCH_MINIMIZE_HIT,
-        .power = 70, //65
+        .power = 60, //65
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -1578,7 +1578,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_NORMAL,
-        .accuracy = 85, //85
+        .accuracy = 85, //75
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
