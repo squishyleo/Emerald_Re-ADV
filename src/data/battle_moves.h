@@ -300,7 +300,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_STOMP] =
-    {
+    {   
         .effect = EFFECT_FLINCH_MINIMIZE_HIT,
         .power = 60, //65
         .type = TYPE_NORMAL,
