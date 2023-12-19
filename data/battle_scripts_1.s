@@ -232,6 +232,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectBlizzard				 @ EFFECT_BLIZZARD // ADDED
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1921,6 +1922,11 @@ BattleScript_EffectThunder::
 	setmoveeffect MOVE_EFFECT_PARALYSIS
 	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
 	goto BattleScript_EffectHit
+
+BattleScript_EffectBlizzard:: @ Added
+	setmoveeffect MOVE_EFFECT_FREEZE @ Added
+	orword gHitMarker, HITMARKER_IGNORE_ON_AIR @ Added
+	goto BattleScript_EffectHit @ Added
 
 BattleScript_EffectTeleport::
 	attackcanceler
