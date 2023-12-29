@@ -1154,8 +1154,8 @@ static void Cmd_accuracycheck(void)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if (WEATHER_HAS_EFFECT && gBattleMons[gBattlerTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & B_WEATHER_SANDSTORM)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
-        if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && IS_TYPE_PHYSICAL(type)) // maybe get rid of physical part and reduce accuracy loss (evil smile) 
-            calc = (calc * 80) / 100; // 1.2 hustle loss
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE) // maybe get rid of physical part and reduce accuracy loss (evil smile) && IS_TYPE_PHYSICAL(type)
+            calc = (calc * 85) / 100; // 1.2 hustle loss, 1.25 now
 
         if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
         {
@@ -8807,7 +8807,7 @@ static void Cmd_hiddenpowercalc(void)
                  | ((gBattleMons[gBattlerAttacker].spAttackIV & 1) << 4)
                  | ((gBattleMons[gBattlerAttacker].spDefenseIV & 1) << 5);
 
-    gDynamicBasePower = (40 * powerBits) / 63 + 30;
+    gDynamicBasePower =  75; // (40 * powerBits) / 63 + 30; flat 80 base power
 
     // Subtract 3 instead of 1 below because 2 types are excluded (TYPE_NORMAL and TYPE_MYSTERY)
     // The final + 1 skips past Normal, and the following conditional skips TYPE_MYSTERY

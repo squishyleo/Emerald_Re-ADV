@@ -3677,8 +3677,8 @@ static const u16 sBlazikenLevelUpLearnset[] = {
 };
 
 static const u16 sMudkipLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_HAIL), // TACKLE
-    LEVEL_UP_MOVE( 1, MOVE_BLIZZARD), // GROWL
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE), // TACKLE
+    LEVEL_UP_MOVE( 1, MOVE_GROWL), // GROWL
     LEVEL_UP_MOVE( 7, MOVE_MUD_SLAP),
     LEVEL_UP_MOVE( 10, MOVE_WATER_GUN), //10
     LEVEL_UP_MOVE(14, MOVE_BIDE),
