@@ -3624,7 +3624,6 @@ static const u16 sSceptileLevelUpLearnset[] = {
 static const u16 sTorchicLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
-    LEVEL_UP_MOVE( 1, MOVE_MEDITATE),
     LEVEL_UP_MOVE( 7, MOVE_EMBER), //10
     LEVEL_UP_MOVE(11, MOVE_FOCUS_ENERGY), //7
     LEVEL_UP_MOVE(16, MOVE_PECK),
