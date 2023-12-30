@@ -233,6 +233,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
 	.4byte BattleScript_EffectBlizzard				 @ EFFECT_BLIZZARD // ADDED
+	.4byte BattleScript_EffectMeditate				 @ EFFECT_MEDITATE // ADDED
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2800,6 +2801,31 @@ BattleScript_DragonDanceTrySpeed::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_DragonDanceEnd::
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectMeditate:: @ added
+	attackcanceler @ added
+	attackstring @ added
+	ppreduce @ added
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_MeditateDoMoveAnim @ added
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPATK, MAX_STAT_STAGE, BattleScript_CantRaiseMultipleStats @ added
+BattleScript_MeditateDoMoveAnim:: @ added
+	attackanimation @ added
+	waitanimation @ added
+	setbyte sSTAT_ANIM_PLAYED, FALSE @ added
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_SPATK, 0 @ added
+	setstatchanger STAT_ATK, 1, FALSE @ added
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MeditateTrySpAttack @ added
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MeditateTrySpAttack @ added
+	printfromtable gStatUpStringIds @ added
+	waitmessage B_WAIT_TIME_LONG @ added
+BattleScript_MeditateTrySpAttack:: @ added
+	setstatchanger STAT_SPATK, 1, FALSE @ added
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MeditateEnd @ added
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MeditateEnd @ added
+	printfromtable gStatUpStringIds @ added
+	waitmessage B_WAIT_TIME_LONG @ added
+BattleScript_MeditateEnd:: @ added
+	goto BattleScript_MoveEnd @ added
 
 BattleScript_EffectCamouflage::
 	attackcanceler
