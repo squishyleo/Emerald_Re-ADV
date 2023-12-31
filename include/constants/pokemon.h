@@ -2,6 +2,11 @@
 #define GUARD_CONSTANTS_POKEMON_H
 
 // Pokemon types
+
+// from "C:\Users\15877\Documents\Pokemon_Emerald_Re-ADV\include\battle.h" :
+// (455) #define IS_TYPE_PHYSICAL(moveType)(moveType < TYPE_MYSTERY)
+// (456) #define IS_TYPE_SPECIAL(moveType)(moveType > TYPE_MYSTERY)
+
 #define TYPE_NONE             255
 #define TYPE_NORMAL           0
 #define TYPE_FIGHTING         1
@@ -12,15 +17,15 @@
 #define TYPE_BUG              6
 #define TYPE_DARK             7 // GHOST
 #define TYPE_STEEL            8
-#define TYPE_MYSTERY          9
-#define TYPE_FIRE             10
-#define TYPE_WATER            11
-#define TYPE_GRASS            12
-#define TYPE_ELECTRIC         13
-#define TYPE_PSYCHIC          14
-#define TYPE_ICE              15
-#define TYPE_DRAGON           16
-#define TYPE_GHOST             17 // DARK
+#define TYPE_DRAGON           9 // Dragon now Physical, works for 2nd-ary types eg DRG/FLY or DRG/GND both physical except Lati Twins . But even Sceptile and Yanman got some attack buffs and Kingdra has equal att/spatt 
+#define TYPE_MYSTERY          10
+#define TYPE_FIRE             11
+#define TYPE_WATER            12
+#define TYPE_GRASS            13
+#define TYPE_ELECTRIC         14
+#define TYPE_PSYCHIC          15
+#define TYPE_ICE              16
+#define TYPE_GHOST            17 // DARK
 #define NUMBER_OF_MON_TYPES   18
 
 // Pokemon egg groups

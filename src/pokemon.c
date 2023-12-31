@@ -3143,8 +3143,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
-        attack = (180 * attack) / 100;
-        spAttack = (180 * spAttack) / 100;
+        attack = 2 * attack;
+        spAttack = 2 * spAttack;
 
     if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerIdAtk))
         attack = (110 * attack) / 100;
