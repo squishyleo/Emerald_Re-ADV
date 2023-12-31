@@ -3143,8 +3143,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
-        attack = 2 * attack;
-        spAttack = 2 * spAttack;
+    {
+        attack *= 2;
+        spAttack *= 2;
+    }
 
     if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerIdAtk))
         attack = (110 * attack) / 100;
@@ -3191,11 +3193,16 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
         spAttack /= 2;
     if (attacker->ability == ABILITY_HUSTLE)
-        attack = (130 * attack) / 100; // 150, lowered, but works for physical and special
+        attack = (130 * attack) / 100; // lowered, but works for physical and special
+        spAttack = (130 * spAttack) / 100;
     if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
         spAttack = (150 * spAttack) / 100;
+    if (attacker->ability == ABILITY_PLUS) // Plus gets 1.25 spAttck bonus
+        spAttack = (125 * spAttack) / 100; // even if Minus isn't on field
     if (attacker->ability == ABILITY_MINUS && ABILITY_ON_FIELD2(ABILITY_PLUS))
         spAttack = (150 * spAttack) / 100;
+    if (attacker->ability == ABILITY_MINUS) // Minus gives 1.25 spAttck bonus
+        spAttack = (125 * spAttack) / 100;  // even if Plus isn't on field
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
