@@ -3197,18 +3197,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (130 * attack) / 100; // lowered, but works for physical and special
         spAttack = (130 * spAttack) / 100;
     }
+
     if (attacker->ability == ABILITY_PLUS)
     {
-        if (ABILITY_ON_FIELD2(ABILITY_MINUS))
-            spAttack = (150 * spAttack) / 100;
+        if (ABILITY_ON_FIELD2(ABILITY_MINUS))  // check if parter poke has Plus, and if it does
+            spAttack = (150 * spAttack) / 100; // it gives the regular 1.5x boost
         else
-            spAttack = (125 * spAttack) / 100;
+            spAttack = (125 * spAttack) / 100; // if not, it gives 1.25x so it's not useless in singles
+    }
     if (attacker->ability == ABILITY_MINUS)
     {
-        if (ABILITY_ON_FIELD2(ABILITY_PLUS))
-            spAttack = (150 * spAttack) / 100;
+        if (ABILITY_ON_FIELD2(ABILITY_PLUS))   // check if parter poke has Plus, and if it does
+            spAttack = (150 * spAttack) / 100; // it gives the regular 1.5x boost
         else
-            spAttack = (125 * spAttack) / 100;
+            spAttack = (125 * spAttack) / 100; // if not, it gives 1.25x so it's not useless in singles
     }
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;

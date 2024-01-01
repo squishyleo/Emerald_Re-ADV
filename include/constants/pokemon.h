@@ -17,7 +17,7 @@
 #define TYPE_BUG              6
 #define TYPE_DARK             7 // GHOST
 #define TYPE_STEEL            8
-#define TYPE_DRAGON           9 // Dragon now Physical, works for 2nd-ary types eg DRG/FLY or DRG/GND both physical except Lati Twins . But even Sceptile and Yanman got some attack buffs and Kingdra has equal att/spatt 
+#define TYPE_DRAGON           9 // Dragon = Physical, works for 2nd-ary types eg DRG/FLY both physical except Lati Twins . But even Sceptile and Yanman got some attack buffs and Kingdra has equal att/spatt 
 #define TYPE_MYSTERY          10
 #define TYPE_FIRE             11
 #define TYPE_WATER            12
