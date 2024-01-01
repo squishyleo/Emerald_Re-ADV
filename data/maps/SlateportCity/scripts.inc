@@ -568,6 +568,10 @@ SlateportCity_EventScript_PowerTMClerk::
 SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_TM10  @ Hidden Power
 	.2byte ITEM_TM43  @ Secret Power
+	.2byte ITEM_TM08  @ Bulk Up
+	.2byte ITEM_TM09  @ Bullet Seed
+	.2byte ITEM_TM39  @ Rock Tomb
+	.2byte ITEM_TM47  @ Steel Wing
 	.2byte ITEM_NONE
 	release
 	end

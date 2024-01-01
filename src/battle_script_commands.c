@@ -758,7 +758,7 @@ static const u8 sFlailHpScaleToPowerTable[] =
 
 static const u16 sNaturePowerMoves[] =
 {
-    [BATTLE_TERRAIN_GRASS]      = MOVE_STUN_SPORE,
+    [BATTLE_TERRAIN_GRASS]      = MOVE_SLEEP_POWDER, // STUN_SPORE
     [BATTLE_TERRAIN_LONG_GRASS] = MOVE_RAZOR_LEAF,
     [BATTLE_TERRAIN_SAND]       = MOVE_EARTHQUAKE,
     [BATTLE_TERRAIN_UNDERWATER] = MOVE_HYDRO_PUMP,
@@ -766,8 +766,8 @@ static const u16 sNaturePowerMoves[] =
     [BATTLE_TERRAIN_POND]       = MOVE_BUBBLE_BEAM,
     [BATTLE_TERRAIN_MOUNTAIN]   = MOVE_ROCK_SLIDE,
     [BATTLE_TERRAIN_CAVE]       = MOVE_SHADOW_BALL,
-    [BATTLE_TERRAIN_BUILDING]   = MOVE_SWIFT,
-    [BATTLE_TERRAIN_PLAIN]      = MOVE_SWIFT
+    [BATTLE_TERRAIN_BUILDING]   = MOVE_TRI_ATTACK, // SWIFT
+    [BATTLE_TERRAIN_PLAIN]      = MOVE_MAGNITUDE // SWIFT
 };
 
 // format: min. weight (hectograms), base power
