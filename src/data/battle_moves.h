@@ -2408,7 +2408,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FAINT_ATTACK] =
     {
         .effect = EFFECT_ALWAYS_HIT,
-        .power = 65, //60
+        .power = 75, //60
         .type = TYPE_DARK,
         .accuracy = 0,
         .pp = 20,
@@ -3669,7 +3669,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_KNOCK_OFF] =
     {
         .effect = EFFECT_KNOCK_OFF,
-        .power = 70, //20
+        .power = 60, //20
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 20,
